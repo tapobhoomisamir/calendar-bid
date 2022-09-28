@@ -1,21 +1,10 @@
 [
     {
-        "id": 111,
-        "breed":"Texas Longhorn",
+        "id": 1,
+        "breed":"तपोभूमी दिनदर्शिका २०२३",
         "basePrice": 200,
-        "image":"image1.jpg"        
-    },
-    {
-        "id": 112,
-        "breed":"Hereford",
-        "basePrice": 300,
-        "image":"image2.jpg" 
-    },
-    {
-        "id": 113,
-        "breed":"Shorthorn",
-        "basePrice": 350,
-        "image":"image3.jpg" 
+        "image":"cal.jpg"        
     }
+   
     
 ]
