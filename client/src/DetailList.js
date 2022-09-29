@@ -116,21 +116,35 @@ class Details extends Component {
 
    render() {
     const imgUrl = require(`./assets/${this.props.image}`);
+    const imgleftUrl = require(`./assets/2.jpg`);
+    const imgRightUrl = require(`./assets/1.jpg`);
+
     //display an individual LiveStock Detail
     return (
+      
+      <div className="col-md-12">
+      <div className="col-md-4">
+        <div className="">
+          <div className="row">
+            <div className="col-md-12">
+              <Image src={imgleftUrl} width="100%" rounded /> 
+            </div>
+          </div>
+          </div>
+      </div>
       <div className="col-md-4">
         <div className="bid-detail-div">
           <div className="row">
             <div className="col-md-12">
-              <Image src={imgUrl} width="275" height="183" rounded />
+              {/* <Image src={imgUrl} width="275" height="183" rounded /> */}
             </div>
           </div>
           <div className="row">
             <div className="col-md-12 ">
               <div>
                 <div className="livestock-info">
-                  <h5>{this.props.breed} - {this.props.id}</h5>
-                  <h5>Base Price - ${this.props.basePrice}</h5>
+                  {/* <h5>{this.props.breed} - {this.props.id}</h5>
+                  <h5>Base Price - ${this.props.basePrice}</h5> */}
                    {this.props.timeFromServer > 0 &&
                      <BidTimer timeFromServer={this.props.timeFromServer}/>
                    }
@@ -164,12 +178,22 @@ class Details extends Component {
           <div className = "row bid-history-div">
             {Object.keys(this.props.bidHistory).length > 0 &&
               <div>
-                <h4 className="bid-history-header ">Bid History</h4>
+               {/*  <h4 className="bid-history-header ">Bid History</h4> */}
                 <BidHistory bidHistory={this.props.bidHistory} ></BidHistory>
               </div>
              }
           </div>
         </div>
+      </div>
+      <div className="col-md-4">
+        <div className="">
+          <div className="row">
+            <div className="col-md-12">
+              <Image src={imgRightUrl}  width="100%" rounded /> 
+            </div>
+          </div>
+          </div>
+      </div>
       </div>
     );
 

@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import Welcome from './Welcome';
+//import {  Routes, Route } from "react-router-dom";
+//import { Route,Switch, HashRouter as Router } from 'react-router-dom'
+//import Welcome from './Welcome';
+import Dashboard  from './Dashboard';
+import Bid  from './Bid';
 import './App.css';
-
-class App extends Component {
-  // Initialize state
-  state = {details:[],bidHistory:[]}
-
-  // Fetch liveStock Details after first mount
-  componentDidMount() {
-    this.getDetails();          
-  }
-
-  getDetails = () => {
-    // Get the livestock Details and store them in state
-    fetch('/api/details')
-      .then(res => res.json())
-      .then(details => this.setState({details}));
-  }
-
-  render() {
-    return (
-      <div className="App container-fluid">
-        <div className = "row nav-bar">
-          <div className = "col-md-12 app-title"><h1>Shree Kshtra Tapobhoomi</h1></div>
-        </div>
-        <div className = "row">          
-            <Welcome details = {this.state.details} />          
-        </div>
-      </div>     
-    );
-  }
+import Route from "./Route"
+// function App() {
+//   return (
+//       {/* <Router>
+//         <Routes>
+//           <Route path="/dashboard" element={<Dashboard/>}>
+//           </Route>
+//           <Route path="/bid" element={<Bid/>}>
+//           </Route>
+//         </Routes>
+//       </Router> */}
+      
+//   );
+// }
+export default () => {
+  return (
+    <div className="ui container">
+      <Route path="/dashboard">
+        <Dashboard />
+      </Route>
+      <Route path="/bid">
+        <Bid />
+      </Route>
+      
+    </div>
+  )
 }
-
-export default App;
+//export default App;

@@ -21,12 +21,16 @@ class Welcome extends Component {
 
   render() {
     const userName = this.state.username;   
+    const typeId = this.props.typeId;
     return (
-      <div className="col-md-12">       
-          <div className="row user-banner"> 
+
+      <div className="col-md-12">   
+        {typeId === 'bid' ? ( 
+           <div className="row user-banner"> 
+           
             {userName ==='' ? (
               <div className="col-md-12  label-center"> 
-                 <h3>Please Enter Your Name To Bid</h3>       
+                 <p>Please Enter Your Name To Bid</p>       
                   <form className="form-inline" onSubmit={this.handleSubmit}>
                     <div className="form-group mx-sm-3" >                                       
                       <input id="inputUsername" placeholder="User Name" className="form-control" type="text" value={this.state.value} onChange={this.handleChange} />
@@ -38,13 +42,16 @@ class Welcome extends Component {
               </div>
               ):(
                 <div className="col-md-12  label-center">
-                  <h2>HI! {userName} Welcome to BUYMYCOW</h2>                  
+                  <h2>HI! {userName} Welcome </h2>                  
                 </div>
               )}
-           
-          </div>
+              
+          </div> ):''}
+          
+          
          <div className="label-center">           
           </div>
+        
       
          <div className="row">          
           <div className="col-md-12 product-detail-div"> 

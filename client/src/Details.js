@@ -33,7 +33,7 @@ var Details = React.createClass({
     return (
       <div className="donation">
         <h2 className="donationContributor">
-          {this.props.contributor}: ${this.props.amount}
+          {this.props.contributor}: Rs. {this.props.amount}
         </h2>
           {this.props.comment.toString()}
       </div>

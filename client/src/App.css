@@ -57,10 +57,10 @@
 
   .bid-detail-div {
     background-color: white;
-    padding-left: 50px;
+    padding-left: 30px;
     padding-top: 30px;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 0px;
+    margin-left: 0px;
     margin-bottom: 30px;
   }
 
@@ -86,7 +86,7 @@
   }
 
   .bid-history-list {
-          padding-right: 15%;
+          padding-right: 5%;
   }
 
   ul .list-group-item:nth-child(2) {  
@@ -142,3 +142,4 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+h1{ text-align: center;}

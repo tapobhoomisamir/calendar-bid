@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 const server = app.listen(port);
 const http = require('http').Server(app);
 const io = require('socket.io').listen(server);
-const bidDuration = 3600;
+const bidDuration = 18000;
 const startTime = process.hrtime();
 
 
