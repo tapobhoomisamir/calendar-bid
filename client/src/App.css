@@ -93,6 +93,7 @@
   font-weight: bold !important; 
    animation: glow .5s infinite alternate;
   }
+  .list-group-item {font-size: larger;}
 
   .clockdiv{
     font-family: sans-serif;
